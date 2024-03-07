@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magazine Articles</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h2>Magazine Articles</h2>
+  <button class="add-article-btn">Add Article</button> 
+  <table id="article-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th class="thSortable" onclick="sortTable(1)">Title</th>
+        <th>Writer</th>
+        <th class="thSortable"onclick="sortTable(3)">Publication date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id ="article-table-body">
+    <!-- Rows will be dynamically populated here -->
+    </tbody>
+    </table>
+ 
+
+  <div id="imageModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Images list</h2>
+      <div id="imageContainer">
+        
+      </div>
+    </div>
+  </div>
+
+  <button class="add-article-btn">Add Article</button>
+
+
+  <div id="add-article-form" class="modal">
+    <div class="modal-content">  
+      <span class="close">&times;</span>
+      <h2>Add Article</h2>
+      <form id="add-form" name="add-form">
+          <label for="id">Id:</label><br>
+          <input type="text" id="id" name="id" required><br>
+          <label for="title">Title:</label><br>
+          <input type="text" id="title" name="title" required><br>
+          <label for="summary">Summary:</label><br>
+          <textarea id="summary" name="summary" required></textarea><br>
+          <label for="writer-name">Writer name:</label><br>
+          <input type="text" id="writer-name" name="writer-name" required><br>
+          <label for="writer-email">Writer email:</label><br>
+          <input type="email" id="writer-email" name="writer-email" required><br>
+          <label for="writer-mobile-phone">Writer mobile phone:</label><br>
+          <input id="writer-mobile-phone" name="writer-mobile-phone" required><br>
+          <label for="writer-home-phone">Writer home phone:</label><br>
+          <input id="writer-home-phone" name="writer-home-phone" ><br>
+          <label for="publish-date">Publication Date:</label><br>
+          <input type="date" id="publish-date" name="publish-date" required><br>
+          <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="update-article-form" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Update Article</h2>
+        <form id="update-form" name ="update-form">
+            <label for="update-title">Title:</label><br>
+            <input type="text" id="update-title" name="title"><br>
+            <label for="update-summary">Summary:</label><br>
+            <textarea id="update-summary" name="update-summary"></textarea><br>
+            <label for="update-publish-date">Publication Date:</label><br>
+            <input type="date" id="update-publish-date" name="publish-date"><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+  <script src="/js/client.js"></script>
+</body>
+</html>
+
+
+
+
+
+
